@@ -15,7 +15,7 @@ const Main = () => {
     dispatch(fetchItem());
   }, []);
   if (status === "PENDING") {
-    return <div>LOADING .....</div>;
+    return <div className="box">LOADING .....</div>;
   }
   return (
     <div style={{ marginTop: "2rem" }}>
@@ -32,8 +32,11 @@ const Main = () => {
             return (
               <div className="main-div">
                 <Link to={`/cocktail/${e.idDrink}`}>
-                  <Card sx={{ width: "250px", height: "340px", mb: "1rem" }}>
+                  <Card sx={{ width: "250px", height: "365px", mb: "1rem" }}>
                     <CardBody>
+                      <h1 style={{ color: "red", marginBottom: "5%" }}>
+                        CLICK TO KNOW MORE
+                      </h1>
                       <img
                         src={e && e.strDrinkThumb}
                         alt="hi"
