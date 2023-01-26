@@ -17,6 +17,24 @@ const Main = () => {
   if (status === "PENDING") {
     return <div className="box">LOADING .....</div>;
   }
+
+  if (!cocktail) {
+    return (
+      <div className="box">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "20%",
+          }}
+        >
+          <h1 style={{ color: "white", fontSize: "2rem" }}>
+            APOLOGIES THIS ITEM IS NOT AVAILABLE RIGHT NOW !!
+          </h1>
+        </div>
+      </div>
+    );
+  }
   return (
     <div style={{ marginTop: "2rem" }}>
       <main style={{ display: "flex", justifyContent: "center" }}>
